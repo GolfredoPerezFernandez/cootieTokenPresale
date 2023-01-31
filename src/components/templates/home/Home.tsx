@@ -2952,7 +2952,6 @@ console.log('1 ')
           await res0.wait(3);
         }
 		
-		console.log('1 '+Moralis.Units.ETH(values.stakeCoot))
 
 		
 		console.log('1 ')
@@ -4522,12 +4521,13 @@ if(res.status === 200) {
 				<Box style={{
 						backgroundColor:'#18192D',
 						padding:50,
+						height:700,
+						borderRadius:10,
 						borderWidth:5,
 						borderColor:'#21BF96',
-						height:props.width<1200?740:700,
-						borderRadius:10,
-                        alignSelf: props.width<800?'center':'flex-start',
-                        width: props.width<800?'90%':'55%', 
+						minWidth:300,
+                        alignSelf: props.width<1000?'center':'flex-start',
+                        width: props.width<1000?'90%':'25%', 
 						}}>
 						<Heading   fontSize="2xl" marginBottom={4} textAlign={'center'}>
 						STAKE
