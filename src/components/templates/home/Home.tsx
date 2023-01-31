@@ -4355,6 +4355,7 @@ if(res.status === 200) {
           height:"200px",
           alignItems: 'center',
           display: 'flex',
+		  flex:1,
           flexDirection: 'column',
           justifyContent: 'center'
         }}
@@ -4461,7 +4462,7 @@ if(res.status === 200) {
 					{'Token Price:'}
 				  </Text>
 					<Text  fontSize="sm"  textAlign={'center'}>
-					  {(parseFloat((Moralis.Units.ETH(rate.toString())))/10000).toString().substring(0,9).concat(' FLR ')}
+					  {(parseFloat((Moralis.Units.ETH(rate.toString())))/1000).toString().substring(0,9).concat(' FLR ')}
 					</Text>
 				   
 				   </HStack>
@@ -4675,7 +4676,7 @@ if(res.status === 200) {
 					{'Token Price:'}
 				  </Text>
 					<Text  fontSize="sm"  textAlign={'center'}>
-					  {(parseFloat((Moralis.Units.ETH(rate.toString())))/10000).toString().substring(0,9).concat(' FLR ')}
+					  {(parseFloat((Moralis.Units.ETH(rate.toString())))/100).toString().substring(0,9).concat(' FLR ')}
 					</Text>
 				   
 				   </HStack>
