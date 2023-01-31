@@ -52,7 +52,7 @@ const Header = (props: any) => {
       setNetwork('Songbird')
       
       const sendOptionsSymbol3 = {
-        contractAddress:'0x61C9f0fd8639Fc6FEbAF0D942097784574289C54',
+        contractAddress:'0xe4671844Fcb3cA9A80A1224B6f9A0A6c2Ba2a7d5',
         functionName: 'balanceOf',
         abi: erc20ABI,
         params: {

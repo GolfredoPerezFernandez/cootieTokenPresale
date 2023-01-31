@@ -88,6 +88,7 @@ const Home = (props: any) => {
     const [rewardsNew, setRewardsNew] = React.useState<any>(0);
 
     const [isOpen, setIsOpen] = React.useState<any>(false);
+	const [tokenHolders, setTokenHolders] = React.useState<any>('0');
 
 	const [circulatingNFT, setCirculatingNFTs] = React.useState<any>(0);
   const [circulating, setCirculating] = React.useState<any>(0);
@@ -2987,6 +2988,16 @@ console.log('1 ')
 	
 	
 		if (chainId === '0x13') {
+			
+		const options5 = {
+			contractAddress: '0xd4d427D30abA626c138B49eFeC799f933B20F35f',
+			functionName: 'totalSupply',
+			abi: collection,
+		  };
+		  
+		const totalSupplyNFt: any = await Moralis.executeFunction(options5);
+			
+
 			const options3 = {
 			  contractAddress: '0xe4671844Fcb3cA9A80A1224B6f9A0A6c2Ba2a7d5',
 			  functionName: 'balanceOf',
@@ -3003,14 +3014,7 @@ console.log('1 ')
 			};
 			const totalSupply: any = await Moralis.executeFunction(options4);
 			
-			const options5 = {
-				contractAddress: '0xd4d427D30abA626c138B49eFeC799f933B20F35f',
-				functionName: 'totalSupply',
-				abi: collection,
-			  };
 	
-			  const totalSupplyNFt: any = await Moralis.executeFunction(options5);
-			
 			
 			  const val: any =
 			  parseFloat(await Moralis.Units.FromWei(totalSupply.toString())) -
@@ -3313,7 +3317,6 @@ setRewardsToClaimV1(rewardsToClaim22.toString());
 
 			handleUpdateFlare()
 		},5000)
-			   handleUpdateFlare()
 			  
 
 		
@@ -4100,6 +4103,40 @@ if(res.status === 200) {
       setPending(Moralis.Units.FromWei(pen));
       setDeposit(Moralis.Units.FromWei(transaction.amount));
 	 
+			const options3 = {
+			  contractAddress: '0x61C9f0fd8639Fc6FEbAF0D942097784574289C54',
+			  functionName: 'balanceOf',
+			  abi: erc20ABI, 
+			  params: { account: '0x000000000000000000000000000000000000dead' },
+			};
+			const balanceOf: any = await Moralis.executeFunction(options3);
+	
+	
+			const options4 = {
+			  contractAddress: '0x61C9f0fd8639Fc6FEbAF0D942097784574289C54',
+			  functionName: 'totalSupply',
+			  abi: erc20ABI,
+			};
+			const totalSupply: any = await Moralis.executeFunction(options4);
+			
+	
+			
+			  const val: any =
+			  parseFloat(await Moralis.Units.FromWei(totalSupply.toString())) -
+			  parseFloat(await Moralis.Units.FromWei(balanceOf.toString()))
+		 
+		  setCirculating(Math.round(val)-1000000);
+		  
+
+		  await axios.get(`https://flare-explorer.flare.network/api?module=token&action=getTokenHolders&contractaddress=${"0x61C9f0fd8639Fc6FEbAF0D942097784574289C54".toLowerCase()}`,{
+			responseType: 'json'
+		  }).then(async (res:any) => {
+			if(res.status === 200) { 
+					setTokenHolders(res.data.result.length)
+
+			}
+	
+			})
 	 await axios.get(`https://flare-explorer.flare.network/api?module=account&action=tokenbalance&contractaddress=${"0x61C9f0fd8639Fc6FEbAF0D942097784574289C54".toLowerCase()}&address=${"0x47c127Aff88b53Ce680C569d2656b0873AcB749a".toLowerCase()}`,{
         responseType: 'json'
       }).then(async (res:any) => {
@@ -4108,6 +4145,9 @@ if(res.status === 200) {
 		}
 
 		})
+
+		
+
 	   const contract2 = new ethers.Contract('0x8A5E92af8Bd4279a8F5145134db3820de9588078', tokenPresaleABI, provider);
 
 	   const transaction2 = await contract2.connect(signer).rate();
@@ -4338,7 +4378,8 @@ if(res.status === 200) {
 			bgImg={'https://bafybeigzfwhzccyenfapbdqbg76z4v2r63pjoodcryzo6obvjazvhuzs2i.ipfs.nftstorage.link/'}
 			bgClip={'border-box'}
     >    
-    {isOpen? <Box style={{justifyContent:'center',alignItems:'center'}}> <Modal
+    {isOpen? <Box style={{justifyContent:'center',height:props.height*2,width:props.width,backgroundColor:'#161A42',alignItems:'center'}}>
+		 <Modal
       cancelText="Abort"
       id="disabled"
       isCancelDisabled={true}
@@ -4378,40 +4419,83 @@ if(res.status === 200) {
     > 
  <Stack style={{ paddingLeft:props.width<1000?"0px":"0px",flexDirection:props.width<1000?"column":"column", marginTop: props.width<1000?0:40,marginBottom: 0, width: '100%', justifyContent: props.width<1000?"center":'center',gap: props.width<1000?70:100, alignItems: props.width<1000?"center":'center' }}>
               
-                
-               <VStack width={props.width<1000?"280px":"100%"}>   
+             
+    {props.width<1000?<VStack style={{width:'80%'}}>
+	   
+	   <VStack width={props.width<1000?"280px":"100%"}>   
+					   
+					   <Heading   color={"#1CFFA0T"}  width={props.width<1000?"280px":"100%"} marginBottom={'0px'}  marginTop={props.width<1000?"80px":"0px"} fontSize={props.width<1000?"2xl":"4xl"}  alignSelf={'center'} textAlign={'left'}>
+								COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
+					   
+								 </Heading>
+							   
+						   <Stack
+						   alignSelf={"flex-start"}
+						   alignItems={'flex-start'}
+						   justifyContent={'flex-start'}
+						   marginBottom="0px"
+						   minWidth="240px"
+						   height={props.width<800?"70px":"20px"}
+						 >
+					   
+								  <TypeAnimation
+							 sequence={[
+							   'MORE THAN JUST ART', 
+							   4000, 
+							   'SUSTAINABLE AND DECENTRALIZED',
+							   4000,
+							   'YIELD OPTIMIZER ON SONGBIRD & FLARE NETWORKS',
+							   4000
+							 ]}
+							 wrapper="div"
+							 cursor={true}
+							 repeat={Infinity}
+							 style={{ fontSize: '1.0em' ,textAlign:'center'}}
+						   />
+					   </Stack>  
+					   </VStack> 
+	   <HStack style={{width:props.width < 1000 ?'80%':'80%'}}>
+		   <video loop autoPlay  src={"https://bafybeib3gahhmfbyeoyth4uqfmpf7kzwxegbgywck647uy3lq2a76h3scq.ipfs.w3s.link/Final_Render.mp4"} />
+		   </HStack>	
+		   </VStack>:
+<HStack style={{width:'80%'}}>
+	   
+<VStack width={props.width<1000?"280px":"100%"}>   
 				
-<Heading   color={"#1CFFA0T"}  width={props.width<1000?"280px":"100%"} marginBottom={'0px'}  marginTop={props.width<1000?"80px":"0px"} fontSize={props.width<1000?"2xl":"4xl"}  alignSelf={'center'} textAlign={'center'}>
-          MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
-
-          </Heading>
-        
-    <Stack
-    alignSelf={"center"}
-    alignItems={'center'}
-    justifyContent={'center'}
-    marginBottom="0px"
-    minWidth="240px"
-    height={props.width<800?"70px":"20px"}
-  >
-
-           <TypeAnimation
-      sequence={[
-        'Cootie Finance is a Value-Oriented', 
-        4000, 
-        'Sustainable and Decentralized',
-        4000,
-        'Yield Optimizer on Songbird & Flare Networks',
-        4000
-      ]}
-      wrapper="div"
-      cursor={true}
-      repeat={Infinity}
-      style={{ fontSize: '1.0em' ,textAlign:'center'}}
-    />
-</Stack>  
-</VStack> 
-    
+				<Heading   color={"#1CFFA0T"}  width={props.width<1000?"280px":"100%"} marginBottom={'0px'}  marginTop={props.width<1000?"80px":"0px"} fontSize={props.width<1000?"2xl":"4xl"}  alignSelf={'center'} textAlign={'left'}>
+						 COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
+				
+						  </Heading>
+						
+					<Stack
+					alignSelf={"flex-start"}
+					alignItems={'flex-start'}
+					justifyContent={'flex-start'}
+					marginBottom="0px"
+					minWidth="240px"
+					height={props.width<800?"70px":"20px"}
+				  >
+				
+						   <TypeAnimation
+					  sequence={[
+						'MORE THAN JUST ART', 
+						4000, 
+						'SUSTAINABLE AND DECENTRALIZED',
+						4000,
+						'YIELD OPTIMIZER ON SONGBIRD & FLARE NETWORKS',
+						4000
+					  ]}
+					  wrapper="div"
+					  cursor={true}
+					  repeat={Infinity}
+					  style={{ fontSize: '1.0em' ,textAlign:'center'}}
+					/>
+				</Stack>  
+				</VStack> 
+<HStack style={{width:props.width < 1000 ?'30%':'80%'}}>
+	<video autoPlay src={"https://bafybeib3gahhmfbyeoyth4uqfmpf7kzwxegbgywck647uy3lq2a76h3scq.ipfs.w3s.link/Final_Render.mp4"} />
+	</HStack>	
+	</HStack>}
 {props.width < 1000 ? (
             <VStack style={{ marginTop:20,width: props.width<1000?"70%":'20%',justifyContent:'center',alignItems:'center'}}>
                 
@@ -4993,13 +5077,13 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
   >
            <TypeAnimation
       sequence={[
-        'Cootie Finance is a Value-Oriented', 
-        4000, 
-        'Sustainable and Decentralized',
-        4000,
-        'Yield Optimizer on Songbird & Flare',
-        4000,
-      ]}
+		'MORE THAN JUST ART', 
+		4000, 
+		'SUSTAINABLE AND DECENTRALIZED',
+		4000,
+		'YIELD OPTIMIZER ON SONGBIRD & FLARE NETWORKS',
+		4000
+	  ]}
       wrapper="div"
       cursor={true}
       repeat={Infinity}
@@ -6926,31 +7010,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						theme="primary"
 					  />    */}
 					  
-          {props.width<800? <VStack alignContent={'center'} style={{marginLeft:props.width<800?"-40px":"0px",}} justifyContent={'center'} alignSelf={"center"}>
-                  <Box alignSelf={'center'} width={250} style={{justifyContent: 'center', alignItems: 'flex-start'}} height="70px">
-                    <Information
-                      information={numberWithCommas(circulating).concat(' COOT')}
-                      topic="Circulating Supply"
-                    />
-                  </Box>              
-
-					  <Box height="10px"/>
-                  <Box alignSelf={'center'} marginTop={20} width={250} height="70px">
-                    <Information information={'+ 2000'} topic="COOT Token Holders" />
-                  </Box>
-				  
-                  </VStack>: <HStack width={"100%"}  justifyContent={'center'} alignSelf={"center"}>
-                  <Box width={250} style={{justifyContent: 'center', alignItems: 'center'}} height="70px">
-                    <Information
-                    
-                      information={numberWithCommas(circulating).concat(' COOT')}
-                      topic="Circulating Supply"
-                    />
-                  </Box>
-                  <Box  width={250} height="70px">
-                    <Information information={'+ 2000'} topic="COOT Token Holders" />
-                  </Box>
-                  </HStack>}
+        
 
 				  <Box style={{ height: 10,justifyContent:'center',alignItems:'center',alignSelf:'center' }} />
 				  
@@ -6989,7 +7049,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
           </Link>
 
         </Stack>}
-		
+		{/* 
 <Box height={'20px'}/>
 
 		<Text
@@ -7034,8 +7094,39 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
     />
   </React.Fragment>
 </Hero>:null}
-<Box height={'20px'}/>
+<Box height={'20px'}/> */}
 
+<Box height="50px"/>
+
+
+  {props.width<800?
+		   <VStack alignContent={'center'} style={{marginLeft:props.width<800?"-40px":"0px",}} justifyContent={'center'} alignSelf={"center"}>
+                  <Box alignSelf={'center'} width={250} style={{justifyContent: 'center', alignItems: 'flex-start'}} height="70px">
+                    <Information
+                      information={numberWithCommas(circulating).concat(' COOT')}
+                      topic="Circulating Supply"
+                    />
+                  </Box>              
+
+					  <Box height="10px"/>
+                  <Box alignSelf={'center'} marginTop={20} width={250} height="70px">
+				  <Information information={tokenHolders} topic="COOTIE CASH Holders" />
+                  </Box>
+				  
+                  </VStack>: <HStack width={"100%"}  justifyContent={'center'} alignSelf={"center"}>
+                  <Box width={250} style={{justifyContent: 'center', alignItems: 'center'}} height="70px">
+                    <Information
+                    
+                      information={numberWithCommas(circulating).concat(' COOT')}
+                      topic="Circulating Supply"
+                    />
+                  </Box>
+                  <Box  width={250} height="70px">
+                    <Information information={tokenHolders} topic="COOTIE CASH Holders" />
+                  </Box>
+                  </HStack>}
+				  
+<Box height="100px"/>
 <Footer />
       
     </Stack>
