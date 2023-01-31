@@ -83,9 +83,11 @@ const Header = (props: any) => {
   }
 
     if (isWeb3Enabled && isAuthenticated && !isWeb3EnableLoading && user) {
-    
+    setInterval(async ()=>{
 
-      init(); 
+      await init();
+    },5000)
+ 
     }
   }, [user, isWeb3Enabled, isAuthenticated, isWeb3EnableLoading,chainId]);
  

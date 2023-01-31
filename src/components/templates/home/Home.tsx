@@ -4498,7 +4498,7 @@ if(res.status === 200) {
 					  {'YOU WILL GET'}
 					</Text>
                       <Text  fontSize="sm"  textAlign={'center'}>
-                        {(parseFloat(values.buyTokens.toString()===''?'0':Moralis.Units.ETH(values.buyTokens.toString()))*parseFloat(rate)).toString().concat(' CASH')}
+                        {Math.trunc((parseFloat(values.buyTokens.toString()===''?'0':Moralis.Units.ETH(values.buyTokens.toString())))*parseFloat(rate)).toString().concat(' CASH')}
                       </Text>
 					  </VStack>
 					  
@@ -4712,7 +4712,7 @@ if(res.status === 200) {
 					  {'YOU WILL GET'}
 					</Text>
                       <Text  fontSize="sm"  textAlign={'center'}>
-                        {(parseFloat(values.buyTokens.toString()===''?'0':Moralis.Units.ETH(values.buyTokens.toString()))*parseFloat(rate)).toString().concat(' CASH')}
+                        {Math.trunc((parseFloat(values.buyTokens.toString()===''?'0':Moralis.Units.ETH(values.buyTokens.toString())))*parseFloat(rate)).toString().concat(' CASH')}
                       </Text>
 					  </VStack>
 					  
