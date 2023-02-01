@@ -4455,7 +4455,7 @@ if(res.status === 200) {
 					   </Stack>  
 					   </VStack> 
 	   <HStack style={{width:props.width < 1000 ?'80%':'80%'}}>
-		   <video loop autoPlay  src={"https://bafybeib3gahhmfbyeoyth4uqfmpf7kzwxegbgywck647uy3lq2a76h3scq.ipfs.w3s.link/Final_Render.mp4"} />
+		   <video loop={true} autoPlay  src={"https://bafybeia7qmxiwhnzmbbc7oevuwcyr6x2qldb4oaxiqzyaktjx63mgbilzu.ipfs.w3s.link/Main_Render_2.mp4"} />
 		   </HStack>	
 		   </VStack>:
 <HStack style={{width:'80%'}}>
