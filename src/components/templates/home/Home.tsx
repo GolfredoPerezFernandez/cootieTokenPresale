@@ -4455,7 +4455,7 @@ if(res.status === 200) {
 					   </Stack>  
 					   </VStack> 
 	   <HStack style={{width:props.width < 1000 ?'80%':'80%'}}>
-		   <video loop={true} autoPlay  src={"https://bafybeia7qmxiwhnzmbbc7oevuwcyr6x2qldb4oaxiqzyaktjx63mgbilzu.ipfs.w3s.link/Main_Render_2.mp4"} />
+		   <video loop  autoPlay src={"https://bafybeia7qmxiwhnzmbbc7oevuwcyr6x2qldb4oaxiqzyaktjx63mgbilzu.ipfs.w3s.link/Main_Render_2.mp4"} />
 		   </HStack>	
 		   </VStack>:
 <HStack style={{width:'80%'}}>
@@ -4493,7 +4493,7 @@ if(res.status === 200) {
 				</Stack>  
 				</VStack> 
 <HStack style={{width:props.width < 1000 ?'30%':'80%'}}>
-	<video autoPlay src={"https://bafybeib3gahhmfbyeoyth4uqfmpf7kzwxegbgywck647uy3lq2a76h3scq.ipfs.w3s.link/Final_Render.mp4"} />
+	<video autoPlay src={"https://bafybeia7qmxiwhnzmbbc7oevuwcyr6x2qldb4oaxiqzyaktjx63mgbilzu.ipfs.w3s.link/Main_Render_2.mp4"} />
 	</HStack>	
 	</HStack>}
 {props.width < 1000 ? (
@@ -4515,7 +4515,7 @@ if(res.status === 200) {
 						   </Heading>
 				 
 				 <Image
-						src={'https://bafybeiajodtp75eyqahhuzufskjmdxuxofqiftmm32fgl7t6zxzlryl4c4.ipfs.w3s.link/money-bag-dynamic-premium.png'}
+						src={'https://bafybeig4bxgszj2xkscq3matsrjbs2nbrxjrgxtnoyq6jev5c5pquwjlim.ipfs.w3s.link/dollar-dollar-premium.png'}
 						marginLeft={"35%"}
 						height={'80px'}
 						marginTop={5}
@@ -4729,7 +4729,7 @@ if(res.status === 200) {
 						   </Heading>
 				 
 				 <Image
-						src={'https://bafybeiajodtp75eyqahhuzufskjmdxuxofqiftmm32fgl7t6zxzlryl4c4.ipfs.w3s.link/money-bag-dynamic-premium.png'}
+						src={'https://bafybeig4bxgszj2xkscq3matsrjbs2nbrxjrgxtnoyq6jev5c5pquwjlim.ipfs.w3s.link/dollar-dollar-premium.png'}
 						marginLeft={"35%"}
 						height={'80px'}
 						marginTop={5}
