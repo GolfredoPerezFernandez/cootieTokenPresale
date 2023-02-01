@@ -124,7 +124,7 @@ const Header = (props: any) => {
           <HStack>
             {!user ? null : props.width < 800 ? null : (
               <Text fontSize="1xl" marginLeft={20} textAlign={'right'}>
-                {balance === '' ? '' : balance.concat(' CASH')}
+                {balance === '' ? '' :network!=='Songbird'? balance.concat(' CASH'):balance.concat(' COOT')}
               </Text>
             )}
 

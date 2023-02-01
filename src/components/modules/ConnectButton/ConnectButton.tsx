@@ -1,3 +1,26 @@
+/* eslint @typescript-eslint/no-var-requires: "off" */
+/* eslint-disable complexity */
+/* eslint @typescript-eslint/no-explicit-any: "off" */
+/* eslint-disable arrow-spacing */
+/* eslint-disable no-await-in-loop */
+/* eslint-disable arrow-parens */
+/* eslint-disable arrow-spacing */
+/* eslint-disable prefer-const */
+/* eslint-disable no-undef */
+
+/* eslint-disable array-callback-return */
+
+/* eslint @typescript-eslint/no-unused-vars: "off" */
+
+/* eslint-disable etc/no-commented-out-code */
+/* eslint-disable no-loop-func */
+/* eslint-disable no-inline-comments */
+/* eslint-disable no-inline-comments */
+/* eslint @typescript-eslint/no-shadow: "off" */
+/* eslint @typescript-eslint/no-empty-function: "off" */
+
+
+
 import { signOut, useSession } from 'next-auth/react';
 
 import { Button, Text, HStack, Avatar, useToast } from '@chakra-ui/react';
@@ -92,13 +115,16 @@ const ConnectButton = () => {
 
   return (
     <Button width={'200px'} backgroundColor={'#1CFFA0T'} disabled={loading && isWeb3EnableLoading} onClick={handleAuth} color="#F45EAC">
-     <HStack>  <Image
+     <HStack> 
+       {/* <Image
       src={'https://bafybeig3u2v3deghowo5df3ig5lydo6enb35awmtb5pt5ymv7zsy64enta.ipfs.w3s.link/MetaMask_Fox.svg.png'}
      
       height={'20px'}
       width={"20px"}
       alt="Ultimate"
-    /> <Typography color={'white'}>Metamask </Typography></HStack> 
+    /> */} 
+    
+    <Typography color={'red'}>Connect Wallet </Typography></HStack> 
     </Button>
   );
 };
