@@ -4570,7 +4570,7 @@ if(res.status === 200) {
                           onClick={handleBuyTokens}
                           isFullWidth={true}
 						  color="blue"
-						  theme="primary"
+						  theme='colored'
                           text="BUY COOTIE CASH"
                         />
 						<Box style={{ height: 10 }} />
@@ -4784,7 +4784,7 @@ if(res.status === 200) {
                           onClick={handleBuyTokens}
                           isFullWidth={true}
 						  color="blue"
-						  theme="primary"
+						  theme='colored'
                           text="BUY COOTIE CASH"
                         />
 						<Box style={{ height: 10 }} />
