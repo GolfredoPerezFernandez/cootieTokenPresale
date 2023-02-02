@@ -2790,7 +2790,7 @@ var res=await deploy_contract.deploy(payload).send({from:account}, async (err, t
 					address: '0xe990eAA4D078f3F3018F692A5880423cF9536f92',
 					symbol: 'COOT',
 					decimals: 18,
-					image: 'https://bafkreiad3ksqpxasuooqbtq4f6mbzotub6ybxpm25y6nl2t5uf44btvx4y.ipfs.nftstorage.link/',
+					image: 'https://bafybeigdnzirusfqgp6u7ie2mlmo7wyqlxye7rtpjivmv3yacdyhh5pyhi.ipfs.w3s.link/logocf.png',
 				  },
 				},
 			  });
@@ -2943,6 +2943,8 @@ var res=await deploy_contract.deploy(payload).send({from:account}, async (err, t
         const res11 = await contract0
           .connect(signer)
           .allowance(user.get('ethAddress'), '0x5b05De92E629879FB6c9107C987388EDE3C41245');
+
+
         if (parseFloat(res11) < parseFloat(Moralis.Units.ETH(values.stakeCoot))) {
           const res0 = await contract0
             .connect(signer)
@@ -4441,7 +4443,9 @@ if(res.status === 200) {
 							 sequence={[
 							   'MORE THAN JUST ART', 
 							   4000, 
-							   'SUSTAINABLE AND DECENTRALIZED',
+							   '0.5% BURN ON EVERY TOKEN TRANSFER', 
+							   4000,
+							   'SUSTAINABLE, DEFLACTIONARY AND DECENTRALIZED',
 							   4000,
 							   'YIELD OPTIMIZER ON SONGBIRD & FLARE NETWORKS',
 							   4000
@@ -4479,7 +4483,9 @@ if(res.status === 200) {
 					  sequence={[
 						'MORE THAN JUST ART', 
 						4000, 
-						'SUSTAINABLE AND DECENTRALIZED',
+						'0.5% BURN ON EVERY TOKEN TRANSFER', 
+						4000,
+						'SUSTAINABLE, DEFLACTIONARY AND DECENTRALIZED',
 						4000,
 						'YIELD OPTIMIZER ON SONGBIRD & FLARE NETWORKS',
 						4000
