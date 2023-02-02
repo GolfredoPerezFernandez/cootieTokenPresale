@@ -4504,7 +4504,7 @@ if(res.status === 200) {
 						height:700,
 						borderRadius:10,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						minWidth:300,
                         alignSelf: props.width<1000?'center':'flex-start',
                         width: props.width<1000?'90%':'25%', 
@@ -4532,10 +4532,10 @@ if(res.status === 200) {
 					  </VStack>
 					  
 					 <HStack mt={2} alignItems={"flex-start"} justifyContent={"center"}>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'}  textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'}  textAlign={'center'}>
 					  {'Raised'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {weiRaised.concat(' FLR ')}
 					</Text>
 					
@@ -4608,7 +4608,7 @@ if(res.status === 200) {
 						height:700,
 						borderRadius:10,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						minWidth:300,
                         alignSelf: props.width<1000?'center':'flex-start',
                         width: props.width<1000?'90%':'25%', 
@@ -4630,11 +4630,11 @@ if(res.status === 200) {
 						/>
   
   <HStack mt={2} alignItems={"flex-start"} justifyContent={"center"}>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'}   textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'}   textAlign={'center'}>
 					  {'APY'}
 					</Text>
 
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {reward1.substring(0,5).concat(" %")}
 					</Text>
 					
@@ -4718,7 +4718,7 @@ if(res.status === 200) {
 						height:700,
 						borderRadius:10,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						minWidth:300,
                         alignSelf: props.width<1000?'center':'flex-start',
                         width: props.width<1000?'60%':'25%', 
@@ -4746,10 +4746,10 @@ if(res.status === 200) {
 					  </VStack>
 					  
 					 <HStack mt={2} alignItems={"flex-start"} justifyContent={"center"}>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'}  textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'}  textAlign={'center'}>
 					  {'Raised'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {weiRaised.concat(' FLR ')}
 					</Text>
 					
@@ -4822,7 +4822,7 @@ if(res.status === 200) {
 						height:700,
 						borderRadius:10,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						minWidth:300,
                         alignSelf: props.width<1000?'center':'flex-start',
                         width: props.width<1000?'60%':'25%', 
@@ -4844,11 +4844,11 @@ if(res.status === 200) {
 						/>
   
   <HStack mt={2} alignItems={"flex-start"} justifyContent={"center"}>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'}   textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'}   textAlign={'center'}>
 					  {'APY'}
 					</Text>
 
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {reward1.substring(0,5).concat(" %")}
 					</Text>
 					
@@ -4926,7 +4926,7 @@ if(res.status === 200) {
 						backgroundColor:'#18192D',
 						padding:50,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						height:props.width<1200?740:700,
 						marginLeft:0,
 						borderRadius:10,
@@ -4953,7 +4953,7 @@ if(res.status === 200) {
 						<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 						{'Rewards'}
 						</Text>
-						<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+						<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 						{"0.5 "}
 						</Text>
 						<Text   fontSize="sm" mb={2}  textAlign={'center'}>
@@ -5130,7 +5130,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						height:700,
 						borderRadius:10,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						minWidth:300,
                         alignSelf: props.width<1000?'center':'flex-start',
                         width: props.width<1000?'60%':'25%', 
@@ -5163,7 +5163,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'APY'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {reward1.substring(0,5).concat(' %')}
 					</Text>
 					
@@ -5291,7 +5291,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						height:820,
 						borderRadius:10,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						minWidth:300,
                         alignSelf: props.width<1000?'center':'flex-start',
                         width: props.width<1000?'60%':'25%', 	}}>
@@ -5315,7 +5315,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'Rewards'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {"0.5"}
 					</Text>
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
@@ -5412,7 +5412,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						height:820,
 						borderRadius:10,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						minWidth:300,
                         alignSelf: props.width<1000?'center':'flex-start',
                         width: props.width<1000?'60%':'25%', }}>
@@ -5436,7 +5436,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'Rewards'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {"0.3 "}
 					</Text>
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
@@ -5539,7 +5539,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						padding:50,
 						marginRight:-140,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						height:props.width<1200?740:680,
 						borderRadius:10,
                         alignSelf: props.width<800?'center':'flex-start',
@@ -5565,7 +5565,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'APY'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {reward1.substring(0,5).concat(" %")}
 					</Text>
 					
@@ -5693,7 +5693,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						backgroundColor:'#18192D',
 						padding:50,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						borderRadius:10,
                         alignSelf: props.width<800?'center':'flex-start',
                         width: props.width<800?'50%':'25%', 
@@ -5719,7 +5719,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'Rewards'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {' 0.00055 '}
 					</Text>
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
@@ -5809,7 +5809,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						backgroundColor:'#18192D',
 						padding:50,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						height:props.width<1200?740:690,
 						marginLeft:0,
 						borderRadius:10,
@@ -5836,7 +5836,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'Rewards'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {"0.5 "}
 					</Text>
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
@@ -5932,7 +5932,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						backgroundColor:'#18192D',
 						padding:50,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						height:props.width<1200?740:690,
 						marginLeft:-140,
 						borderRadius:10,
@@ -5961,7 +5961,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'Rewards'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {"0.3 "}
 					</Text>
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
@@ -6072,7 +6072,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'Rewards'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {"0.3 "}
 					</Text>
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
@@ -6175,7 +6175,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						height:700,
 						borderRadius:10,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						minWidth:300,
                         alignSelf: props.width<1000?'center':'flex-start',
                         width: props.width<1000?'60%':'25%', 
@@ -6201,7 +6201,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'APY'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {reward3.substring(0,5).concat(" %")}
 					</Text>
 					</HStack>
@@ -6287,7 +6287,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						height:700,
 						borderRadius:10,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						minWidth:300,
                         alignSelf: props.width<1000?'center':'flex-start',
                         width: props.width<1000?'60%':'25%', 
@@ -6314,7 +6314,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'APY'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {reward4.substring(0,5).concat(" %")}
 					</Text>
 					
@@ -6399,7 +6399,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						height:700,
 						borderRadius:10,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						minWidth:300,
                         alignSelf: props.width<1000?'center':'flex-start',
                         width: props.width<1000?'60%':'25%', 
@@ -6425,7 +6425,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'APY'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					{reward5.substring(0,5).concat(" %")}
 					</Text>
 					
@@ -6514,7 +6514,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						padding:50,
 						marginRight:-140,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						height:props.width<1200?740:680,
 						borderRadius:10,
                         alignSelf: props.width<800?'center':'flex-start',
@@ -6541,7 +6541,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'APY'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {reward3.substring(0,5).concat(" %")}
 					</Text>
 					
@@ -6625,7 +6625,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						padding:50,
 						marginRight:-140,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						height:props.width<1200?740:680,
 						borderRadius:10,
                         alignSelf: props.width<800?'center':'flex-start',
@@ -6652,7 +6652,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'APY'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					  {reward4.substring(0,5).concat(" %")}
 					</Text>
 					
@@ -6740,7 +6740,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 						height:700,
 						borderRadius:10,
 						borderWidth:5,
-						borderColor:'#21BF96',
+						borderColor:'#34CFE8',
 						minWidth:300,
                         alignSelf: props.width<1000?'center':'flex-start',
                         width: props.width<1000?'60%':'25%', 
@@ -6766,7 +6766,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 					<Text   fontSize="sm" mb={2}  textAlign={'center'}>
 					  {'APY'}
 					</Text>
-					<Text   fontSize="sm" mb={2} color={'#21BF96'} textAlign={'center'}>
+					<Text   fontSize="sm" mb={2} color={'#34CFE8'} textAlign={'center'}>
 					{reward5.substring(0,5).concat(" %")}
 					</Text>
 					
