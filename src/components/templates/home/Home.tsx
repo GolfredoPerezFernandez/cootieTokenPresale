@@ -4445,7 +4445,7 @@ if(res.status === 200) {
 							   4000, 
 							   '0.5% BURN ON EVERY TOKEN TRANSFER', 
 							   4000,
-							   'SUSTAINABLE, DEFLACTIONARY AND DECENTRALIZED',
+							   'SUSTAINABLE, DEFLATIONARY AND DECENTRALIZED',
 							   4000,
 							   'YIELD OPTIMIZER ON SONGBIRD & FLARE NETWORKS',
 							   4000
@@ -4485,7 +4485,7 @@ if(res.status === 200) {
 						4000, 
 						'0.5% BURN ON EVERY TOKEN TRANSFER', 
 						4000,
-						'SUSTAINABLE, DEFLACTIONARY AND DECENTRALIZED',
+						'SUSTAINABLE, DEFLATIONARY AND DECENTRALIZED',
 						4000,
 						'YIELD OPTIMIZER ON SONGBIRD & FLARE NETWORKS',
 						4000
@@ -4690,7 +4690,7 @@ if(res.status === 200) {
                           onClick={handleDepositFlare}
                           isFullWidth={true}
 						  color="blue"
-						  theme="primary"
+						  theme="colored"
                           text="STAKE COOTIE CASH"
                         />
                         <Button
@@ -4904,7 +4904,7 @@ if(res.status === 200) {
                           onClick={handleDepositFlare}
                           isFullWidth={true}
 						  color="blue"
-						  theme="primary"
+						  theme="colored"
                           text="STAKE COOTIE CASH"
                         />
                         <Button

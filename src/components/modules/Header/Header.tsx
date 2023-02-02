@@ -79,10 +79,6 @@ const Header = (props: any) => {
       await init();
     },5000)
  
-    }else{
- 
-        
-     
     }
   }, [isWeb3Enabled, isAuthenticated, chainId]);
  
