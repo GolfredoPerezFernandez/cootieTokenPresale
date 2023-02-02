@@ -2787,7 +2787,7 @@ var res=await deploy_contract.deploy(payload).send({from:account}, async (err, t
 				params: {
 				  type: 'ERC20',
 				  options: {
-					address: '0x61C9f0fd8639Fc6FEbAF0D942097784574289C54',
+					address: '0xe990eAA4D078f3F3018F692A5880423cF9536f92',
 					symbol: 'COOT',
 					decimals: 18,
 					image: 'https://bafkreiad3ksqpxasuooqbtq4f6mbzotub6ybxpm25y6nl2t5uf44btvx4y.ipfs.nftstorage.link/',
@@ -2939,7 +2939,7 @@ console.log('1 ')
         const provider = await Moralis.enableWeb3({ provider: 'metamask' });
         const ethers = Moralis.web3Library;
         const signer = provider.getSigner();
-        const contract0 = new ethers.Contract('0x61C9f0fd8639Fc6FEbAF0D942097784574289C54', erc20ABI, provider);
+        const contract0 = new ethers.Contract('0xe990eAA4D078f3F3018F692A5880423cF9536f92', erc20ABI, provider);
      
 console.log('1 ')
         const res11 = await contract0
@@ -4103,32 +4103,19 @@ if(res.status === 200) {
       setPending(Moralis.Units.FromWei(pen));
       setDeposit(Moralis.Units.FromWei(transaction.amount));
 	 
-			const options3 = {
-			  contractAddress: '0x61C9f0fd8639Fc6FEbAF0D942097784574289C54',
-			  functionName: 'balanceOf',
-			  abi: erc20ABI, 
-			  params: { account: '0x000000000000000000000000000000000000dead' },
-			};
-			const balanceOf: any = await Moralis.executeFunction(options3);
-	
 	
 			const options4 = {
-			  contractAddress: '0x61C9f0fd8639Fc6FEbAF0D942097784574289C54',
+			  contractAddress: '0xe990eAA4D078f3F3018F692A5880423cF9536f92',
 			  functionName: 'totalSupply',
 			  abi: erc20ABI,
 			};
 			const totalSupply: any = await Moralis.executeFunction(options4);
-			
-	
-			
-			  const val: any =
-			  parseFloat(await Moralis.Units.FromWei(totalSupply.toString())) -
-			  parseFloat(await Moralis.Units.FromWei(balanceOf.toString()))
-		 
-		  setCirculating(Math.round(val)-1000000);
+		
+			  const val: any = parseFloat(await Moralis.Units.FromWei(totalSupply.toString()))
+		  setCirculating(Math.round(val));
 		  
 
-		  await axios.get(`https://flare-explorer.flare.network/api?module=token&action=getTokenHolders&contractaddress=${"0x61C9f0fd8639Fc6FEbAF0D942097784574289C54".toLowerCase()}`,{
+		  await axios.get(`https://flare-explorer.flare.network/api?module=token&action=getTokenHolders&contractaddress=${"0xe990eAA4D078f3F3018F692A5880423cF9536f92".toLowerCase()}`,{
 			responseType: 'json'
 		  }).then(async (res:any) => {
 			if(res.status === 200) { 
@@ -4137,7 +4124,7 @@ if(res.status === 200) {
 			}
 	
 			})
-	 await axios.get(`https://flare-explorer.flare.network/api?module=account&action=tokenbalance&contractaddress=${"0x61C9f0fd8639Fc6FEbAF0D942097784574289C54".toLowerCase()}&address=${"0x47c127Aff88b53Ce680C569d2656b0873AcB749a".toLowerCase()}`,{
+	 await axios.get(`https://flare-explorer.flare.network/api?module=account&action=tokenbalance&contractaddress=${"0xe990eAA4D078f3F3018F692A5880423cF9536f92".toLowerCase()}&address=${"0x47c127Aff88b53Ce680C569d2656b0873AcB749a".toLowerCase()}`,{
         responseType: 'json'
       }).then(async (res:any) => {
 		if(res.status === 200) { 
@@ -4595,7 +4582,7 @@ if(res.status === 200) {
                       <Text  fontSize="sm"  textAlign={'center'}>
                         {"1.000.000.000".concat(' CASH')}
                       </Text>
-					  <Text  onClick={()=>{window?.open("https://flare-explorer.flare.network/token/0x61C9f0fd8639Fc6FEbAF0D942097784574289C54/token-transfers", '_blank'); }} fontSize="sm" mb={2} color={'blue'}  textAlign={'center'}>
+					  <Text  onClick={()=>{window?.open("https://flare-explorer.flare.network/token/0xe990eAA4D078f3F3018F692A5880423cF9536f92/token-transfers", '_blank'); }} fontSize="sm" mb={2} color={'blue'}  textAlign={'center'}>
 					  {'Open in Explorer'}
 					</Text>
 					  </VStack>
@@ -4809,7 +4796,7 @@ if(res.status === 200) {
                       <Text  fontSize="sm"  textAlign={'center'}>
                         {"1.000.000.000".concat(' CASH')}
                       </Text>
-					  <Text  onClick={()=>{window?.open("https://flare-explorer.flare.network/token/0x61C9f0fd8639Fc6FEbAF0D942097784574289C54/token-transfers", '_blank'); }} fontSize="sm" mb={2} color={'blue'}  textAlign={'center'}>
+					  <Text  onClick={()=>{window?.open("https://flare-explorer.flare.network/token/0xe990eAA4D078f3F3018F692A5880423cF9536f92/token-transfers", '_blank'); }} fontSize="sm" mb={2} color={'blue'}  textAlign={'center'}>
 					  {'Open in Explorer'}
 					</Text>
 					  </VStack>
