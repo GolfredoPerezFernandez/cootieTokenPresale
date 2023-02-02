@@ -81,7 +81,6 @@ const Header = (props: any) => {
  
     }else{
  
-         Moralis.enableWeb3()
         
      
     }
@@ -128,7 +127,7 @@ const Header = (props: any) => {
             {props.width > 900 ? ( <HStack>
               <ConnectButton />
               <Box width={'20px'}/>
-              <Select style={{color:'green'}} onChange={handleChange} width={'200px'} placeholder={network}>
+              <Select style={{color:'#34CFE8',borderColor:'white'}} onChange={handleChange} width={'200px'} placeholder={network}>
  {network!=='Flare Mainnet'?<option  value='Flare Mainnet'>
  <Text  fontSize="sm"  textAlign={'center'}>
                         {"Flare Mainnet"}
