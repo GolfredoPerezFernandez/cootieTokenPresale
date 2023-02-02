@@ -38,19 +38,7 @@ const Header = (props: any) => {
   useEffect(() => {
     async function init() {
       
-      if(isWeb3EnableLoading&&!user){
-       
-        return
-        }
-
-      if(!isWeb3Enabled&&!isWeb3EnableLoading){
-        
-       await Moralis.enableWeb3()
-       
-     }
-     if(!isWeb3Enabled&&!isWeb3EnableLoading){
-      return
-     }
+   
     if(chainId==='0x13'){
       setNetwork('Songbird')
       
@@ -91,8 +79,13 @@ const Header = (props: any) => {
       await init();
     },5000)
  
+    }else{
+ 
+         Moralis.enableWeb3()
+        
+     
     }
-  }, [user, isWeb3Enabled, isAuthenticated, isWeb3EnableLoading,chainId]);
+  }, [isWeb3Enabled, isAuthenticated, chainId]);
  
  
   const handleChange =async (event:any) => {
