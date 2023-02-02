@@ -55,9 +55,7 @@ const ConnectButton = () => {
   }, [isWeb3Enabled]);
   const handleAuth = async () => {
     setLoading(true);
-    console.log('entro');
     try {
-      console.log('entro');
       await enableWeb3();
       const chainId = Moralis.getChainId();
 

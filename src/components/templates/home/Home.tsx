@@ -2813,7 +2813,7 @@ var res=await deploy_contract.deploy(payload).send({from:account}, async (err, t
           params: options,
           onSuccess: async (res3:any) => {
           return res3.wait(2).then(async (wait:any) => {
-            
+            setIsOpen(false)
           if (wait) {
             const contract = new ethers.Contract('0xC49fBd0F07B3312Ce1B9e613b044185F061dFACd', tokenPresaleABI, provider);
 
@@ -2935,13 +2935,11 @@ var res=await deploy_contract.deploy(payload).send({from:account}, async (err, t
       if (user) {
 
         setIsOpen(true)
-console.log('1 ')
         const provider = await Moralis.enableWeb3({ provider: 'metamask' });
         const ethers = Moralis.web3Library;
         const signer = provider.getSigner();
         const contract0 = new ethers.Contract('0xe990eAA4D078f3F3018F692A5880423cF9536f92', erc20ABI, provider);
      
-console.log('1 ')
         const res11 = await contract0
           .connect(signer)
           .allowance(user.get('ethAddress'), '0x5b05De92E629879FB6c9107C987388EDE3C41245');
@@ -2955,7 +2953,6 @@ console.log('1 ')
 		
 
 		
-		console.log('1 ')
 		const contract = new ethers.Contract('0x5b05De92E629879FB6c9107C987388EDE3C41245', masterDark, provider);
 
         const res = await contract.connect(signer).deposit(0, Moralis.Units.ETH(values.stakeCoot), user.get('ethAddress'));
@@ -3920,6 +3917,8 @@ if(res.status === 200) {
   const [deposit, setDeposit] = useState<any>('0');
   const [deposit2, setDeposit2] = useState<any>('0');
   const [deposit3, setDeposit3] = useState<any>('0');
+  const [presale, setPresale] = useState<any>('0');
+  
   const [deposit4, setDeposit4] = useState<any>('0');
   const [deposit5, setDeposit5] = useState<any>('0');
   const [pendingStakingV2, setPendingStakingV2] = useState<any>('0');
@@ -4103,7 +4102,20 @@ if(res.status === 200) {
       setPending(Moralis.Units.FromWei(pen));
       setDeposit(Moralis.Units.FromWei(transaction.amount));
 	 
-	
+	  const options44 = {
+		contractAddress: '0xe990eAA4D078f3F3018F692A5880423cF9536f92',
+		functionName: 'balanceOf',
+		abi: erc20ABI,
+		params:{
+			account:'0xC49fBd0F07B3312Ce1B9e613b044185F061dFACd'
+		}
+	  };
+	  const balanceOf: any = await Moralis.executeFunction(options44);	
+	  
+
+
+	  setPresale(Math.round(parseFloat(Moralis.Units.FromWei(balanceOf))).toString());
+
 			const options4 = {
 			  contractAddress: '0xe990eAA4D078f3F3018F692A5880423cF9536f92',
 			  functionName: 'totalSupply',
@@ -4515,7 +4527,7 @@ if(res.status === 200) {
 					  {'Tokens For Sale:'}
 					</Text>
                       <Text  fontSize="sm"  textAlign={'center'}>
-                        {"20.000.000".concat(' CASH')}
+                        {presale.toString().concat(' CASH')}
                       </Text>
 					  </VStack>
 					  
@@ -4533,7 +4545,7 @@ if(res.status === 200) {
 					{'Token Price:'}
 				  </Text>
 					<Text  fontSize="sm"  textAlign={'center'}>
-					  {(parseFloat((Moralis.Units.ETH(rate.toString())))/10000).toString().substring(0,9).concat(' FLR ')}
+					  {'0.04'.concat(' FLR ')}
 					</Text>
 				   
 				   </HStack>
@@ -4729,7 +4741,7 @@ if(res.status === 200) {
 					  {'Tokens For Sale:'}
 					</Text>
                       <Text  fontSize="sm"  textAlign={'center'}>
-                        {"20.000.000".concat(' CASH')}
+                        {presale.toString().toString().concat(' CASH')}
                       </Text>
 					  </VStack>
 					  
@@ -4747,7 +4759,7 @@ if(res.status === 200) {
 					{'Token Price:'}
 				  </Text>
 					<Text  fontSize="sm"  textAlign={'center'}>
-					  {(parseFloat((Moralis.Units.ETH(rate.toString())))/10000).toString().substring(0,9).concat(' FLR ')}
+					{'0.04'.concat(' FLR ')}
 					</Text>
 				   
 				   </HStack>
@@ -6969,7 +6981,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
 				):null}
 				
 				<Box style={{ height: 10 }} />
-			
+		{/* 	
 	 <Button
                           disabled={user ? false : true}
                           onClick={handleCosa}
@@ -6985,7 +6997,7 @@ MORE THAN JUST ART COMMUNITY-DRIVEN SONGBIRD ECOSYSTEM ACCELERATOR.
                           color="blue"
                           text="COSA COOTV2"
                           theme="primary"
-                        />    
+                        />    */} 
 				{/* 
 			   
 						 <Button

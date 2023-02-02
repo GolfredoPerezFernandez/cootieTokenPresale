@@ -48,6 +48,9 @@ const Header = (props: any) => {
        await Moralis.enableWeb3()
        
      }
+     if(!isWeb3Enabled&&!isWeb3EnableLoading){
+      return
+     }
     if(chainId==='0x13'){
       setNetwork('Songbird')
       
@@ -60,10 +63,10 @@ const Header = (props: any) => {
         },
       };
       const ownerOf = await Moralis.executeFunction(sendOptionsSymbol3);
-
       setBalance(Math.round(parseFloat(Moralis.Units.FromWei(ownerOf.toString()))).toString());
 
     } else if(chainId==='0xe'){
+      
       setNetwork('Flare Mainnet')
   
       const sendOptionsSymbol3 = {
