@@ -232,7 +232,7 @@ const Home = (props: any) => {
   const handleClaimFlare = async () => {
     setIsOpen(true)
     const sendOptions1 = {
-      contractAddress: '0x47c127Aff88b53Ce680C569d2656b0873AcB749a',
+      contractAddress: '0x5b05De92E629879FB6c9107C987388EDE3C41245',
       functionName: 'harvest',
       abi: masterDark,
       awaitReceipt: true,
@@ -248,7 +248,7 @@ const Home = (props: any) => {
 
     const signer = provider.getSigner();
 
-    const contract = new ethers.Contract('0x47c127Aff88b53Ce680C569d2656b0873AcB749a', masterDark, provider);
+    const contract = new ethers.Contract('0x5b05De92E629879FB6c9107C987388EDE3C41245', masterDark, provider);
 
     const transaction = await contract.connect(signer).userInfo(0, user?.get('ethAddress'));
 
@@ -936,7 +936,7 @@ tokenIds=[...tokenIds,res3[i][1]];
     try{
       
     const sendOptions1 = {
-      contractAddress: '0x47c127Aff88b53Ce680C569d2656b0873AcB749a',
+      contractAddress: '0x5b05De92E629879FB6c9107C987388EDE3C41245',
       functionName: 'withdraw',
       abi: masterDark,
       awaitReceipt: true,
@@ -953,7 +953,7 @@ tokenIds=[...tokenIds,res3[i][1]];
 
     const signer = provider.getSigner();
 
-    const contract = new ethers.Contract('0x47c127Aff88b53Ce680C569d2656b0873AcB749a', masterDark, provider);
+    const contract = new ethers.Contract('0x5b05De92E629879FB6c9107C987388EDE3C41245', masterDark, provider);
 
     const transaction = await contract.connect(signer).userInfo(0, user?.get('ethAddress'));
 
@@ -2800,7 +2800,7 @@ var res=await deploy_contract.deploy(payload).send({from:account}, async (err, t
 			}
 		  }
          const options = {
-          contractAddress: '0x8A5E92af8Bd4279a8F5145134db3820de9588078',
+          contractAddress: '0xC49fBd0F07B3312Ce1B9e613b044185F061dFACd',
           functionName: 'buyTokens',
           abi: tokenPresaleABI,
 		  msgValue:Moralis.Units.ETH(values.buyTokens),
@@ -2815,7 +2815,7 @@ var res=await deploy_contract.deploy(payload).send({from:account}, async (err, t
           return res3.wait(2).then(async (wait:any) => {
             
           if (wait) {
-            const contract = new ethers.Contract('0x8A5E92af8Bd4279a8F5145134db3820de9588078', tokenPresaleABI, provider);
+            const contract = new ethers.Contract('0xC49fBd0F07B3312Ce1B9e613b044185F061dFACd', tokenPresaleABI, provider);
 
             const transaction = await contract.connect(signer).rate();
 
@@ -2944,11 +2944,11 @@ console.log('1 ')
 console.log('1 ')
         const res11 = await contract0
           .connect(signer)
-          .allowance(user.get('ethAddress'), '0x47c127Aff88b53Ce680C569d2656b0873AcB749a');
+          .allowance(user.get('ethAddress'), '0x5b05De92E629879FB6c9107C987388EDE3C41245');
         if (parseFloat(res11) < parseFloat(Moralis.Units.ETH(values.stakeCoot))) {
           const res0 = await contract0
             .connect(signer)
-            .approve('0x47c127Aff88b53Ce680C569d2656b0873AcB749a', Moralis.Units.ETH(values.stakeCoot));
+            .approve('0x5b05De92E629879FB6c9107C987388EDE3C41245', Moralis.Units.ETH(values.stakeCoot));
 
           await res0.wait(3);
         }
@@ -2956,7 +2956,7 @@ console.log('1 ')
 
 		
 		console.log('1 ')
-		const contract = new ethers.Contract('0x47c127Aff88b53Ce680C569d2656b0873AcB749a', masterDark, provider);
+		const contract = new ethers.Contract('0x5b05De92E629879FB6c9107C987388EDE3C41245', masterDark, provider);
 
         const res = await contract.connect(signer).deposit(0, Moralis.Units.ETH(values.stakeCoot), user.get('ethAddress'));
 
@@ -3150,7 +3150,7 @@ console.log('1 ')
 		  const signer = provider.getSigner();
 		  let contract: any = '';
 	
-			contract = new ethers.Contract('0x47c127Aff88b53Ce680C569d2656b0873AcB749a', masterDark, provider);
+			contract = new ethers.Contract('0x5b05De92E629879FB6c9107C987388EDE3C41245', masterDark, provider);
 	  
 	
 		  const transaction = await contract.connect(signer).userInfo(0, user?.get('ethAddress'));
@@ -4091,7 +4091,7 @@ if(res.status === 200) {
       const signer = provider.getSigner();
       let contract: any = '';
 
-        contract = new ethers.Contract('0x47c127Aff88b53Ce680C569d2656b0873AcB749a', masterDark, provider);
+        contract = new ethers.Contract('0x5b05De92E629879FB6c9107C987388EDE3C41245', masterDark, provider);
   
 
       const transaction = await contract.connect(signer).userInfo(0, user?.get('ethAddress'));
@@ -4124,7 +4124,7 @@ if(res.status === 200) {
 			}
 	
 			})
-	 await axios.get(`https://flare-explorer.flare.network/api?module=account&action=tokenbalance&contractaddress=${"0xe990eAA4D078f3F3018F692A5880423cF9536f92".toLowerCase()}&address=${"0x47c127Aff88b53Ce680C569d2656b0873AcB749a".toLowerCase()}`,{
+	 await axios.get(`https://flare-explorer.flare.network/api?module=account&action=tokenbalance&contractaddress=${"0xe990eAA4D078f3F3018F692A5880423cF9536f92".toLowerCase()}&address=${"0x5b05De92E629879FB6c9107C987388EDE3C41245".toLowerCase()}`,{
         responseType: 'json'
       }).then(async (res:any) => {
 		if(res.status === 200) { 
@@ -4135,7 +4135,7 @@ if(res.status === 200) {
 
 		
 
-	   const contract2 = new ethers.Contract('0x8A5E92af8Bd4279a8F5145134db3820de9588078', tokenPresaleABI, provider);
+	   const contract2 = new ethers.Contract('0xC49fBd0F07B3312Ce1B9e613b044185F061dFACd', tokenPresaleABI, provider);
 
 	   const transaction2 = await contract2.connect(signer).rate();
 

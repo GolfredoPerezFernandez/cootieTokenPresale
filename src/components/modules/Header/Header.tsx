@@ -67,7 +67,7 @@ const Header = (props: any) => {
       setNetwork('Flare Mainnet')
   
       const sendOptionsSymbol3 = {
-        contractAddress:'0x61C9f0fd8639Fc6FEbAF0D942097784574289C54',
+        contractAddress:'0xe990eAA4D078f3F3018F692A5880423cF9536f92',
         functionName: 'balanceOf',
         abi: erc20ABI,
         params: {
