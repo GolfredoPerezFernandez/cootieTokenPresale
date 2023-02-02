@@ -4600,7 +4600,7 @@ if(res.status === 200) {
                       <Text  fontSize="sm"  textAlign={'center'}>
                         {"1.000.000.000".concat(' CASH')}
                       </Text>
-					  <Text  onClick={()=>{window?.open("https://flare-explorer.flare.network/token/0xe990eAA4D078f3F3018F692A5880423cF9536f92/token-transfers", '_blank'); }} fontSize="sm" mb={2} color={'blue'}  textAlign={'center'}>
+					  <Text  onClick={()=>{window?.open("https://flare-explorer.flare.network/token/0xe990eAA4D078f3F3018F692A5880423cF9536f92/token-transfers", '_blank'); }} fontSize="sm" mb={2} color={'#34CFE8'}  textAlign={'center'}>
 					  {'Open in Explorer'}
 					</Text>
 					  </VStack>
@@ -4814,7 +4814,7 @@ if(res.status === 200) {
                       <Text  fontSize="sm"  textAlign={'center'}>
                         {"1.000.000.000".concat(' CASH')}
                       </Text>
-					  <Text  onClick={()=>{window?.open("https://flare-explorer.flare.network/token/0xe990eAA4D078f3F3018F692A5880423cF9536f92/token-transfers", '_blank'); }} fontSize="sm" mb={2} color={'blue'}  textAlign={'center'}>
+					  <Text  onClick={()=>{window?.open("https://flare-explorer.flare.network/token/0xe990eAA4D078f3F3018F692A5880423cF9536f92/token-transfers", '_blank'); }} fontSize="sm" mb={2} color={'#34CFE8'}  textAlign={'center'}>
 					  {'Open in Explorer'}
 					</Text>
 					  </VStack>
